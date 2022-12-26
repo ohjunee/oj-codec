@@ -1,0 +1,5 @@
+*.VC.*
+*.aps
+*.ipch
+x64/
+Debug/
