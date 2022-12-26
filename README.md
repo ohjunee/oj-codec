@@ -81,24 +81,24 @@
 ![스크린샷_20221227_051356](https://user-images.githubusercontent.com/49416429/209580780-b085608f-45f1-4af9-addc-7744689aaca9.png)
 
 ## Result image for each module
-> Intra prediction only
+> Intra prediction only  
 > ![스크린샷_20221227_064814](https://user-images.githubusercontent.com/49416429/209585226-a09d2355-4115-4239-8c9d-bcbbcb0a615c.png)  
 > 
-> Intra + Pixel DPCM
+> Intra + Pixel DPCM  
 > ![스크린샷_20221227_065044](https://user-images.githubusercontent.com/49416429/209585316-1e63e0c6-f29c-453b-a2c7-35923a1a360b.png)  
 > 
-> Inter prediction (Motion vector)
-> ![스크린샷_20221227_065044](https://user-images.githubusercontent.com/49416429/209585274-d211f32c-f0ae-4380-b16b-d789e7bb0720.png)  
+> Inter prediction (Motion vector)  
+> ![스크린샷_20221227_065052](https://user-images.githubusercontent.com/49416429/209585371-912af8e8-3175-4155-84a7-63092ef665c4.png)  
 > 
-> DCT Only
-> ![스크린샷_20221227_065052](https://user-images.githubusercontent.com/49416429/209585279-ebd08ffe-3a9a-4f89-86ae-b126bc92d878.png)  
+> DCT Only  
+> ![스크린샷_20221227_065059](https://user-images.githubusercontent.com/49416429/209585375-77d2bb67-62de-4a6f-b38f-7ae49b14a815.png)  
 > 
-> Only Quantization(QP=16)
+> Only Quantization(QP=16)  
 > ![스크린샷_20221227_065106](https://user-images.githubusercontent.com/49416429/209585289-c7e918f7-7da2-4b52-bf51-029a4f0cb094.png)  
 > 
-> DC DPCM Only
+> DC DPCM Only  
 > ![스크린샷_20221227_065113](https://user-images.githubusercontent.com/49416429/209585299-2fb4fbbd-1678-45f7-811f-001384c41d77.png)  
 > 
-> Reorder Only
+> Reorder Only  
 > ![스크린샷_20221227_065119](https://user-images.githubusercontent.com/49416429/209585305-9baa4158-9726-47a7-b4d8-2f293eb2a601.png)  
 
