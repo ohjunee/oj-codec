@@ -81,6 +81,7 @@
 ![스크린샷_20221227_051356](https://user-images.githubusercontent.com/49416429/209580780-b085608f-45f1-4af9-addc-7744689aaca9.png)
 
 ## Result image for each module
+<div align=center>
 > Intra prediction only  
 > ![스크린샷_20221227_064814](https://user-images.githubusercontent.com/49416429/209585226-a09d2355-4115-4239-8c9d-bcbbcb0a615c.png)  
 > 
@@ -101,4 +102,4 @@
 > 
 > Reorder Only  
 > ![스크린샷_20221227_065119](https://user-images.githubusercontent.com/49416429/209585305-9baa4158-9726-47a7-b4d8-2f293eb2a601.png)  
-
+</div>
