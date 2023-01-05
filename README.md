@@ -142,10 +142,10 @@
 
 > <img src="https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png" width="400" height="300"/>  
 > 
-> 첫번째 Frame은 Prediction을 하지 않고 두 번째부터 진행됩니다.   
-> Prediction은 이전 Frame의 원본과 비교하여 진행됩니다.  
+> 두번째부터 Frame부터 예측 수행. 
+> 예측에 사용되는 참조픽쳐는 직전 원본 Frame  
 > Prediction Image와 Original Image를 비교하여 PSNR을 측정할 수 있습니다.  
-> Prediction Image는 Residual Error값이 아닌 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값으로 넣어줍니다.   
+> Prediction Image는 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값에 저장(기존방식인 Residual Error값 저장x)   
 
 ### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
