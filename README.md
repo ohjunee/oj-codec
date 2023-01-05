@@ -134,18 +134,14 @@
 > On the Fast Motion Estimation Algorithm for Inter Prediction.  
 >
 > MPEG and H.264 standards use motion estimation-based inter prediction, which removes temporal redundancy between frames for image compression. 
-> Based on Block matching algorithm that finds the most similar regions in the frame, various methods for psnr and fast algorithm have been proposed.  
+> 
+> Based on Block matching algorithm that finds the most similar regions in the frame, various methods for psnr and fast algorithm have been proposed.
+>   
 > This full search technique, the most classic block-based motion estimation method for video encoding, compares SAD values at all locations within the search area of the previous frame. Therefore, the exact Motion Vector can be found, but computational cost is much higher.  
 >   
 > This project aims to find out the difference between the two fast block matching algorithms, PDE, which is a lossless ME, and PDS, which is a lossy ME, compared to Full Search Algorithm.
 
 > <img src="https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png" width="400" height="300"/>  
-> 
-> 두번째부터 Frame부터 예측 수행. 
-> 
-> 예측에 사용되는 참조픽쳐는 직전 원본 Frame  
-> Prediction Image와 Original Image를 비교하여 PSNR을 측정할 수 있습니다.  
-> Prediction Image는 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값에 저장(기존방식인 Residual Error값 저장x)   
 
 ### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
