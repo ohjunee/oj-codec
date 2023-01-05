@@ -141,7 +141,6 @@
 >   
 > This project aims to find out the difference between the two fast block matching algorithms, PDE, which is a lossless ME, and PDS, which is a lossy ME, compared to Full Search Algorithm.
 
-> <img src="https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png" width="400" height="300"/>  
 
 ### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
