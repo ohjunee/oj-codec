@@ -116,9 +116,6 @@
 ## 3. MPEG_OnlyInterPred  
 > On the Fast Motion Estimation Algorithm for Inter Prediction.  
 >
-> MPEG 및 H.264 표준에서는 영상압축을 위해 프레임간 시간적 중복성을 제거하는 motion estimation 기반의 inter prediction 사용합니다.  
-> 이는 프레임내 가장 유사한 영역을 찾는 블록매칭(block matching) 알고리듬 기반으로 psnr 예측 및 고속화를 위한 다양한 방법들이 제안되었습니다.  
-> 비디오 부호화를 위한 블록기반의 motion estimation 방법 중 가장 고전적인 방법인 full search 기법은 이전 프레임의 탐색 영역 내의 모든 위치에서의 SAD 값을 비교합니다.   
-> 따라서 정확한 MV 값을 찾을 수 있지만 연산량이 매우 크다는 단점이 있습니다.  
-> 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때  
-> 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
+> MPEG 및 H.264 표준에서는 영상압축을 위해 프레임간 시간적 중복성을 제거하는 motion estimation 기반의 inter prediction 사용합니다. 이는 프레임내 가장 유사한 영역을 찾는 블록매칭(block matching) 알고리듬 기반으로 psnr 예측 및 고속화를 위한 다양한 방법들이 제안되었습니다. 비디오 부호화를 위한 블록기반의 motion estimation 방법 중 가장 고전적인 방법인 full search 기법은 이전 프레임의 탐색 영역 내의 모든 위치에서의 SAD 값을 비교합니다. 따라서 정확한 MV 값을 찾을 수 있지만 연산량이 매우 크다는 단점이 있습니다.  
+> 
+> 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
