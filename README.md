@@ -133,16 +133,16 @@
 ## 3. MPEG_OnlyInterPred  
 > On the Fast Motion Estimation Algorithm for Inter Prediction.  
 >
-> MPEG 및 H.264 표준에서는 영상압축을 위해 프레임간 시간적 중복성을 제거하는 motion estimation 기반의 inter prediction 사용합니다. 
-> 이는 프레임내 가장 유사한 영역을 찾는 블록매칭(block matching) 알고리듬 기반으로 psnr 예측 및 고속화를 위한 다양한 방법들이 제안되었습니다. 
-> 비디오 부호화를 위한 블록기반의 motion estimation 방법 중 가장 고전적인 방법인 full search 기법은 이전 프레임의 탐색영역내의 모든 위치에서의 SAD 값을 비교합니다. 
-> 따라서 정확한 MV 값을 찾을 수 있지만 연산량이 매우 크다는 단점이 있습니다.  
-> 
-> 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
+> MPEG and H.264 standards use motion estimation-based inter prediction, which removes temporal redundancy between frames for image compression. 
+> Based on Block matching algorithm that finds the most similar regions in the frame, various methods for psnr and fast algorithm have been proposed.  
+> This full search technique, the most classic block-based motion estimation method for video encoding, compares SAD values at all locations within the search area of the previous frame. Therefore, the exact Motion Vector can be found, but computational cost is much higher.  
+>   
+> This project aims to find out the difference between the two fast block matching algorithms, PDE, which is a lossless ME, and PDS, which is a lossy ME, compared to Full Search Algorithm.
 
 > <img src="https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png" width="400" height="300"/>  
 > 
 > 두번째부터 Frame부터 예측 수행. 
+> 
 > 예측에 사용되는 참조픽쳐는 직전 원본 Frame  
 > Prediction Image와 Original Image를 비교하여 PSNR을 측정할 수 있습니다.  
 > Prediction Image는 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값에 저장(기존방식인 Residual Error값 저장x)   
