@@ -140,8 +140,8 @@
 > 
 > 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
 
-![image](https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png)  
-
+> <img src="https://user-images.githubusercontent.com/49416429/210854334-cdba63a5-b99e-4fd8-abf0-011bcf5c4eb2.png" width="400" height="300"/>  
+> 
 > 첫번째 Frame은 Prediction을 하지 않고 두 번째부터 진행됩니다.   
 > Prediction은 이전 Frame의 원본과 비교하여 진행됩니다.  
 > Prediction Image와 Original Image를 비교하여 PSNR을 측정할 수 있습니다.  
