@@ -1,6 +1,8 @@
 # ICSP-Codec 
 
+
 ## 1. MPEG_V3
+
 
 ## Introduction
 
@@ -23,6 +25,7 @@
 > Fig. 2. Coding order for 4:2:0 format.
 
 
+
 ## Parameter
 
 > In this section, we define some parameters such as size, quantization parameter, and some modes.
@@ -39,6 +42,8 @@
 > -	For DC, 1 ~ 16
 > -	For AC, 1 ~ 16
 
+
+
 ## Encoder description
 
 > The ICSP encoder structure. T and Q mean transform and quantization each. We use simplified intra 8x8 prediction, Discrete Cosine Transform (DCT) as T and uniform quantization with simple dead zone as Q. Zig-zag scan is used for reordering and entropy coder which is like JPEG’s is used. For inter frame, Motion Estimation (ME) and Motion Compensation (MC) are used. Reconstructed frame has to be made using inverse transform and inverse quantization. 
@@ -51,6 +56,8 @@
 > Reorder  zig-zag scan  
 > Entropy encoder  like JPEG  
 
+
+
 ### Encoding a intra frame
 
 > For encoding the intra frame, green units in Fig. 4 are used.  
@@ -60,11 +67,14 @@
 > 
 > In case of I frame, first of all, current frame is divided by macro-block. In raster macro-block scan order, after simplified intra 8x8 prediction, pixel based DPCM, discrete cosine transform, and quantization, we also use DPCM for reconstructed (i.e, quantized and inverse quantized) DC component. And then use the reordering (just zig-zag scan) and entropy encoder (like Huffman coding). While doing this forward process, we save the reconstructed data using inverse quantization, inverse transform, inverse DPCM and simplified intra 8x8 prediction for reference of next frame.
 
+
+
 ### Most Probable Mode
 
 > ![image](https://user-images.githubusercontent.com/49416429/210853033-5c1ea16e-909d-429b-806a-9d362f611063.png) 
 > 
 > To reduce the mode bit for intra mode, we use prediction using neighboring blocks. If median of Upper, Left, and Upper Left is equal to current mode, MPM_flag will be set to one. If not, MPM_flag will be set to zero and additional fixed mode bit is coded.
+
 
 
 ### Encoding a inter frame
@@ -127,10 +137,10 @@
 > 
 > 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
 
-● 첫 번째 Frame은 Prediction을 하지 않고 두 번째부터 진행됩니다.
-● Prediction은 이전 Frame의 원본과 비교하여 진행됩니다.
-● Prediction Image와 Original Image를 비교하여 PSNR을 측정 할 수 있습니다.
-● Prediction Image는 Residual Error값이 아닌 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값으로 넣어줍니다. 
+● 첫 번째 Frame은 Prediction을 하지 않고 두 번째부터 진행됩니다.  
+● Prediction은 이전 Frame의 원본과 비교하여 진행됩니다.  
+● Prediction Image와 Original Image를 비교하여 PSNR을 측정할 수 있습니다.  
+● Prediction Image는 Residual Error값이 아닌 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값으로 넣어줍니다.   
 
 ### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
