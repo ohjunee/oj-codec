@@ -62,8 +62,8 @@
 
 ### Most Probable Mode
 
-> ![image](https://user-images.githubusercontent.com/49416429/210853033-5c1ea16e-909d-429b-806a-9d362f611063.png)
-
+> ![image](https://user-images.githubusercontent.com/49416429/210853033-5c1ea16e-909d-429b-806a-9d362f611063.png) 
+> 
 > To reduce the mode bit for intra mode, we use prediction using neighboring blocks. If median of Upper, Left, and Upper Left is equal to current mode, MPM_flag will be set to one. If not, MPM_flag will be set to zero and additional fixed mode bit is coded.
 
 
