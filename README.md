@@ -60,6 +60,13 @@
 > 
 > In case of I frame, first of all, current frame is divided by macro-block. In raster macro-block scan order, after simplified intra 8x8 prediction, pixel based DPCM, discrete cosine transform, and quantization, we also use DPCM for reconstructed (i.e, quantized and inverse quantized) DC component. And then use the reordering (just zig-zag scan) and entropy encoder (like Huffman coding). While doing this forward process, we save the reconstructed data using inverse quantization, inverse transform, inverse DPCM and simplified intra 8x8 prediction for reference of next frame.
 
+### Most Probable Mode
+
+> ![image](https://user-images.githubusercontent.com/49416429/210853033-5c1ea16e-909d-429b-806a-9d362f611063.png)
+
+> To reduce the mode bit for intra mode, we use prediction using neighboring blocks. If median of Upper, Left, and Upper Left is equal to current mode, MPM_flag will be set to one. If not, MPM_flag will be set to zero and additional fixed mode bit is coded.
+
+
 ### Encoding a inter frame
 
 > For encoding the inter frame, green units in Fig. 5 are used.
@@ -125,5 +132,5 @@
 ● Prediction Image와 Original Image를 비교하여 PSNR을 측정 할 수 있습니다.
 ● Prediction Image는 Residual Error값이 아닌 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값으로 넣어줍니다. 
 
-### Result
+### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
