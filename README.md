@@ -1,6 +1,8 @@
 # ICSP-Codec 
 
+
 ## 1. MPEG_V3
+
 
 ## Introduction
 
@@ -23,6 +25,7 @@
 > Fig. 2. Coding order for 4:2:0 format.
 
 
+
 ## Parameter
 
 > In this section, we define some parameters such as size, quantization parameter, and some modes.
@@ -39,6 +42,8 @@
 > -	For DC, 1 ~ 16
 > -	For AC, 1 ~ 16
 
+
+
 ## Encoder description
 
 > The ICSP encoder structure. T and Q mean transform and quantization each. We use simplified intra 8x8 prediction, Discrete Cosine Transform (DCT) as T and uniform quantization with simple dead zone as Q. Zig-zag scan is used for reordering and entropy coder which is like JPEG’s is used. For inter frame, Motion Estimation (ME) and Motion Compensation (MC) are used. Reconstructed frame has to be made using inverse transform and inverse quantization. 
@@ -51,6 +56,8 @@
 > Reorder  zig-zag scan  
 > Entropy encoder  like JPEG  
 
+
+
 ### Encoding a intra frame
 
 > For encoding the intra frame, green units in Fig. 4 are used.  
@@ -60,11 +67,14 @@
 > 
 > In case of I frame, first of all, current frame is divided by macro-block. In raster macro-block scan order, after simplified intra 8x8 prediction, pixel based DPCM, discrete cosine transform, and quantization, we also use DPCM for reconstructed (i.e, quantized and inverse quantized) DC component. And then use the reordering (just zig-zag scan) and entropy encoder (like Huffman coding). While doing this forward process, we save the reconstructed data using inverse quantization, inverse transform, inverse DPCM and simplified intra 8x8 prediction for reference of next frame.
 
+
+
 ### Most Probable Mode
 
 > ![image](https://user-images.githubusercontent.com/49416429/210853033-5c1ea16e-909d-429b-806a-9d362f611063.png) 
 > 
 > To reduce the mode bit for intra mode, we use prediction using neighboring blocks. If median of Upper, Left, and Upper Left is equal to current mode, MPM_flag will be set to one. If not, MPM_flag will be set to zero and additional fixed mode bit is coded.
+
 
 
 ### Encoding a inter frame
@@ -123,14 +133,14 @@
 ## 3. MPEG_OnlyInterPred  
 > On the Fast Motion Estimation Algorithm for Inter Prediction.  
 >
-> MPEG 및 H.264 표준에서는 영상압축을 위해 프레임간 시간적 중복성을 제거하는 motion estimation 기반의 inter prediction 사용합니다. 이는 프레임내 가장 유사한 영역을 찾는 블록매칭(block matching) 알고리듬 기반으로 psnr 예측 및 고속화를 위한 다양한 방법들이 제안되었습니다. 비디오 부호화를 위한 블록기반의 motion estimation 방법 중 가장 고전적인 방법인 full search 기법은 이전 프레임의 탐색 영역 내의 모든 위치에서의 SAD 값을 비교합니다. 따라서 정확한 MV 값을 찾을 수 있지만 연산량이 매우 크다는 단점이 있습니다.  
+> MPEG and H.264 standards use motion estimation-based inter prediction, which removes temporal redundancy between frames for image compression. 
 > 
-> 이번 프로젝트는 fast 블록 매칭 알고리즘 두 가지, lossless ME인 PDE와 lossy ME인 PDS를 사용하였을때 기존의 full search 방법과 psnr / 연산 시간 / SAD 연산 수에 있어 어떤 차이가 있는지 알아보는 것을 목표로 합니다.
+> Based on Block matching algorithm that finds the most similar regions in the frame, various methods for psnr and fast algorithm have been proposed.
+>   
+> This full search technique, the most classic block-based motion estimation method for video encoding, compares SAD values at all locations within the search area of the previous frame. Therefore, the exact Motion Vector can be found, but computational cost is much higher.  
+>   
+> This project aims to find out the difference between the two fast block matching algorithms, PDE, which is a lossless ME, and PDS, which is a lossy ME, compared to Full Search Algorithm.
 
-● 첫 번째 Frame은 Prediction을 하지 않고 두 번째부터 진행됩니다.
-● Prediction은 이전 Frame의 원본과 비교하여 진행됩니다.
-● Prediction Image와 Original Image를 비교하여 PSNR을 측정 할 수 있습니다.
-● Prediction Image는 Residual Error값이 아닌 현재 처리중인 Block의 값과 유사하다고 판단된 이전 Frame의 Block의 값을 현재 처리중인 Block값으로 넣어줍니다. 
 
 ### Example
 > https://user-images.githubusercontent.com/49416429/210852230-06a8e5c8-105a-47d3-b7a9-034c62606aa4.mp4
