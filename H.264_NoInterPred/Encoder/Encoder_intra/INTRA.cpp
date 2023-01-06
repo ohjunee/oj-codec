@@ -115,9 +115,6 @@ void INTRA_Prediction(BUFFER* img, Data* file, uint8 p_size, uint32 ul_recon, ui
 		if (!(file->split_flag))
 			Write_ReconImageBuffer(img, Recon[Best_DCT_Mode][PredMode], p_size, ul_recon);
 
-		if(file->frameCount > 0)
-			INTER_Prediction(img, file, p_size, ul_recon, ul_org);
-
 #if TEST == 0
 		Send_INTRA(file, Quant_blk[Best_DCT_Mode][PredMode], PredMode, Best_DCT_Mode);
 #else
@@ -190,9 +187,4 @@ void Partitioning(BUFFER* img, Data* file, uint32 nRow, uint32 nCol, uint8 p_siz
 		}
 		block_cnt++;
 	}
-}
-
-void INTER_Prediction(BUFFER* img, Data* file, uint8 p_size, uint32 ul_recon, uint32 ul_org)
-{
-
 }

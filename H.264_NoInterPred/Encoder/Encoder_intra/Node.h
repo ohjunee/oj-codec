@@ -1,12 +1,13 @@
+#pragma once
 #include "input.h"
 
-typedef struct Reference_Picture {
-
-	Ref *left, *right;
-
-	uint8* Ref_Image;
-
-}Ref;
+//typedef struct Reference_Picture {
+//
+//	Ref *left, *right;
+//
+//	uint8* Ref_Image;
+//
+//}Ref;
 
 typedef struct Node {
 

@@ -1,15 +1,15 @@
 #pragma once
 #include "main.h"
 
-#define VIDEO_FRAME			75
+#define VIDEO_FRAME			90
 
-#define WIDTH				176
-#define HEIGHT				144
-#define PSIZE				8
+#define WIDTH				352
+#define HEIGHT				288
+#define PSIZE				8				// macro-block size (default)
  
-#define INPUT_FILENAME		"C:\\images\\BUS_QCIF15_176x144_15.yuv"
-#define OUTPUT_FILENAME_1	"C:\\images\\BUS_QCIF15_176x144_15_bitstream.raw"
-#define OUTPUT_FILENAME_2	"C:\\images\\BUS_QCIF15_176x144_15_recon_encoder.yuv"
+#define INPUT_FILENAME		"C:\\images\\football_cif(352X288)_90f.yuv"
+#define OUTPUT_FILENAME_1	"C:\\images\\football_cif(352X288)_90f.raw"
+#define OUTPUT_FILENAME_2	"C:\\images\\football_cif(352X288)_90f_encoder_result.yuv"
 
 #define OUTPUT_FILENAME_3	"C:\\images\\text_encoder.txt"
 

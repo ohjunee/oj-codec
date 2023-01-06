@@ -42,9 +42,6 @@
     <ClCompile Include="BinaryTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="INTER.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="INTRA.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

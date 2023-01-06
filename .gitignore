@@ -3,3 +3,6 @@
 *.ipch
 x64/
 Debug/
+*.suo
+*.user
+*.sdf
