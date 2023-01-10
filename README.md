@@ -1,7 +1,7 @@
-# ICSP-Codec 
+# Codec Description 
 
 
-## 1. MPEG_V3
+## 1. oj-codec-v2
 
 
 ## Introduction
@@ -125,12 +125,12 @@
 > ![스크린샷_20221227_065119](https://user-images.githubusercontent.com/49416429/209585305-9baa4158-9726-47a7-b4d8-2f293eb2a601.png)  
 
 
-## 2. H.264_NoInterPred
+## 2. oj-codec-v1
 ![스크린샷_20221227_051214](https://user-images.githubusercontent.com/49416429/209580732-beed568c-662d-4a9d-b162-03774960e71d.png)
 ![스크린샷_20221227_051356](https://user-images.githubusercontent.com/49416429/209580780-b085608f-45f1-4af9-addc-7744689aaca9.png)
 
 
-## 3. MPEG_OnlyInterPred  
+## 3. FastME-practice  
 > On the Fast Motion Estimation Algorithm for Inter Prediction.  
 >
 > MPEG and H.264 standards use motion estimation-based inter prediction, which removes temporal redundancy between frames for image compression. 
