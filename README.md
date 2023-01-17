@@ -1,8 +1,7 @@
 # Codec Description 
 
 
-## oj-codec-v2  
-Version 2.4 of ICSP Codec
+## oj-codec-v2: Version 2.4 of ICSP Codec  
 [ [_paper_](https://drive.google.com/file/d/1FbLcp5k9eHsrOxJReUN2g5NRViy-FmTo/view?usp=share_link) ]
 
 ## Introduction
